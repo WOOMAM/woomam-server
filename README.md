@@ -3,13 +3,13 @@
 우아한맘모스(우아한코끼리) 백엔드 개발 담당 박재용(@jaypyon)입니다. 개발은 **Node.js**, **MySQL**을 사용하여 진행할 예정입니다. 
 
 ## Main Features
->1. 회원가입에 대한 CRUD 구현.
+1. 회원가입에 대한 CRUD 구현.
 2. 로그인에 대한 검증 절차 구현.
 4. 세탁기 상태를 받아오고, 갱신할 수 있는 API 구현.
 5. QR 본인인증으로 특정 URL로 POST 요청되었을 떄 실행될 기능(세탁기 상태 갱신) 구현. 
 
 ## Expected Requirements
->1. RESTful API
+1. RESTful API
 2. 아두이노로부터 특정 세탁기에 대한 http 요청이 들어왔을 때, 해당 세탁기의 남은 시간에 따라 상태를 갱신해 줄 필요성이 있음.
 
 ## DB Schema
