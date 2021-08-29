@@ -31,6 +31,19 @@ router.get('/:uuid', async function(req, res) {
 });
 
 
+router.get('/one/:uuid', async function(req, res) {
+  try {
+    let theMachine = await service.getTheMachineState(req)
+    res.status(200).send({
+        result : true,
+        data: theMachine,
+    })
+  } catch (error) {
+      console.log(error)
+  }
+});
+
+
 /**@description book the machine, need the token*/
 router.post('/book', authenticationToken.authenticationToken, async function(req, res) {
   try{
