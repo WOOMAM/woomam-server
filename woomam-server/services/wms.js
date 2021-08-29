@@ -68,7 +68,7 @@ exports.secondQRCheck = async function(req){
   */
   let isRightQR = (rows["phoneNumber"]==phoneNumber&&limitTime<=nowTime);
   if(isRightQR){
-    let queryResult = await db.query(sql.updateTargetWM,[null,null,null,null,'unchecked',"opened",null,washingMachineUID]);
+    let queryResult = await db.query(sql.updateTargetWM,[null,null,null,null,'unchecked',"opened","turnedOff",washingMachineUID]);
     queryResult = queryResult[0];
     if(queryResult["affectedRows"] == 1)return true;
   }
@@ -85,4 +85,10 @@ exports.getAllWashingMachines = async function(req){
 exports.getTheStoreMachines = async function(req){
   let [rows] = await db.query(sql.getStoreWMs,[req.params.uuid])
   return rows;
+}
+
+/** @description get a washing machine enrolled in our service */
+exports.getTheMachineState = async function(req){
+  let [rows] = await db.query(sql.getTargetWM,[req.params.uuid])
+  return rows[0];
 }
