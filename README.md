@@ -10,7 +10,6 @@
 
 ## Architecture
 이번 프로젝트에서 서버는 3-Layer Architecture대로 설계되었습니다.
-![image](https://user-images.githubusercontent.com/72537190/132680540-45efa243-12b8-48c3-8794-97255bb7dbd0.png)
 
 ## Deployed Diagram
 ![image](https://user-images.githubusercontent.com/72537190/132680984-aa556f34-b56a-49d2-95b7-977cfab80cc8.png)
